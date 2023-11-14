@@ -8,4 +8,12 @@ node {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
+   stage('Build') { 
+            steps { 
+                script{
+                 app = docker.build("chat")
+                }
+            }
+        }
 }
+
