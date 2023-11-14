@@ -9,11 +9,9 @@ node {
     }
   }
    stage('Build') { 
-            steps { 
-                script{
-                 app = docker.build("chat")
-                }
-            }
-        }
+     script{
+       app = docker.build("chat")
+     }
+   }
 }
 
